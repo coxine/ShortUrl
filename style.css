@@ -1,11 +1,11 @@
 @font-face {
     font-family: "ceym";
-    src: url("//testingcf.jsdelivr.net/gh/ghboke/corepresscdn@master/static/lib/font/ceym/ceym.woff2") format("woff2");
+    src: url("https://testingcf.jsdelivr.net/gh/ghboke/corepresscdn@master/static/lib/font/ceym/ceym.woff2") format("woff2");
 }
 
 body {
     font-family: ceym!important;
-    background: url(bg.svg) no-repeat center fixed;
+    background: linear-gradient(-20deg, #57875a 5%, #AEDD81 95%);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -24,7 +24,6 @@ input[type=text] {
     text-align: center;
     outline: none;
 }
-
 
 .card {
     width: 800px;
@@ -167,13 +166,13 @@ footer{
     font-size: 18px;
 }
 footer p{
-    color: #666;
+    color: #222;
     margin: 0;
     height: 30px;
     line-height: 30px;
 }
 footer a{
-    color: #666;
+    color: #222;
     text-decoration: none;
 }
 footer a:hover{
