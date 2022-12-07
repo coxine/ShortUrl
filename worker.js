@@ -4,7 +4,7 @@ const html404 = `<!DOCTYPE html>
   <p>The url you visit is not found.</p>
 </body>`
 
-const statichtml = "https://github.com/coxine/ShortUrl/index.html"
+const statichtml = "https://raw.githubusercontent.com/coxine/ShortUrl/main/index.html/"
 
 
 async function randomString (len) {
