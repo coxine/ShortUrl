@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>榆闲短链</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.svg">
+    <meta property="og:title" content="榆闲短链，缩短各类链接~">
+    <meta property="og:site_name" content="榆闲短链">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://costg.cf">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="短小精悍，百用不倒~">
+</head>
+
+<body>
+    <div class="dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <span class="dialog-title">提示</span>
+                <span class="dialog-close">&times;</span>
+            </div>
+            <div class="dialog-body">
+                <!-- <p>短链接：<span id="shortUrl"></span></p> -->
+            </div>
+            <div class="dialog-footer">
+                <!-- 复制按钮 -->
+                <!-- <button class="copy" id="copy">复制</button> -->
+                <!-- 确定按钮 -->
+                <!-- <button class="conform" id="conform">确定</button> -->
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h2>榆闲短链</h2>
+        <div class="form-group">
+            <label for="url">长链接:</label>
+            <input type="text" id="url" name="url" placeholder="例：https://baidu.com" value="" />
+            <label for="shortStr">自定义路径:</label>
+            <input type="text" id="shortStr" name="shortStr" placeholder="例：bai/du 最前面不用加'/' 为空则自动生成一个路径" value="" />
+            <input type="button" id="submit" value="提交" />
+        </div>
+    </div>
+    <footer>
+        <p>榆闲短链 考神保佑，走向辉煌！</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
