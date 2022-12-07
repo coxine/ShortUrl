@@ -32,11 +32,10 @@ input[type=text] {
     overflow: hidden;
 }
 
-h2 {
+h1 {
     text-align: center;
     margin: 0;
     padding: 10px;
-    font-size: 20px;
 }
 
 .form-group {
