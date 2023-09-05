@@ -4,7 +4,7 @@ const html404 = `<!DOCTYPE html>
   <p>The url you visit is not found.</p>
 </body>`
 
-const statichtml = "https://pan.costg.cf/api/raw/?path=/%F0%9F%93%84%E6%96%87%E6%A1%A3/%E7%91%9E%E6%B2%BB%E7%BD%91%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/%E6%A6%86%E9%97%B2%E7%9F%AD%E9%93%BE/index.html"
+const statichtml = "https://cdn.jsdelivr.net/gh/coxine/shorturl/index.html"
 
 
 async function randomString (len) {
