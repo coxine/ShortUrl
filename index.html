@@ -5,50 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>榆闲短链</title>
+    <title>仙河传送门</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <link rel="icon" href="favicon.svg">
-    <meta property="og:title" content="榆闲短链，缩短各类链接~">
-    <meta property="og:site_name" content="榆闲短链">
+    <meta property="og:title" content="[短链] 打开各异的门，奔赴各自的远方">
+    <meta property="og:site_name" content="仙河传送门">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://go.costg.cf">
     <meta property="og:image" content="">
     <meta property="og:description" content="短小精悍，百用不倒~">
 </head>
 
-<body>
-    <div class="dialog">
-        <div class="dialog-content">
-            <div class="dialog-header">
-                <span class="dialog-title">提示</span>
-                <span class="dialog-close">&times;</span>
-            </div>
-            <div class="dialog-body">
-                <!-- <p>短链接：<span id="shortUrl"></span></p> -->
-            </div>
-            <div class="dialog-footer">
-                <!-- 复制按钮 -->
-                <!-- <button class="copy" id="copy">复制</button> -->
-                <!-- 确定按钮 -->
-                <!-- <button class="conform" id="conform">确定</button> -->
-            </div>
+<body class="mdui-theme-primary-light-green mdui-theme-accent-lime">
+    <div class="mdui-container">
+        <!--顶栏-->
+        <div class="mdui-toolbar">
+            <span class="mdui-typo-title">仙河传送门</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="https://costg.de" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '瑞治网'}"><i class="mdui-icon material-icons">home</i></a>
+            <a href="https://res.costg.de" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '瑞治下载站'}""><i class="mdui-icon material-icons">file_download</i></a>
         </div>
-    </div>
-    <div class="card">
-        <h1>榆闲短链</h1>
-        <div class="form-group">
-            <label for="url">长链接:</label>
-            <input type="text" id="url" name="url" placeholder="例：https://costg.cf" value="" style="font-family: ceym!important;"/>
-            <label for="shortStr">自定义路径:</label>
-            <input type="text" id="shortStr" name="shortStr" placeholder="若填入xxx，则生成https://go.costg.cf/xxx，留空随机生成后缀" value="" style="font-family: ceym!important;"/>
-            <input type="button" id="submit" value="提交" style="font-family: ceym!important;"/>
-        </div>
-    </div>
-    <footer>
-        <p>榆闲短链 考神保佑，走向辉煌！</p>
-    </footer>
 
+        <!--输入部分-->
+        <div class="input">
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label mdui-text-color-light-green-900">原来的链接，输入格式：https://costg.de</label>
+                <input class="mdui-textfield-input" type="url" id="url" name="url" />
+            </div>
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label mdui-text-color-light-green-900">短链路径：若填入xxx，则生成https://go.costg.de/xxx，留空随机生成后缀</label>
+                <input class="mdui-textfield-input" id="shortStr" name="shortStr" type="text" />
+            </div>
+            <input class="mdui-btn-raised mdui-btn mdui-color-light-green-900" type="button" id="submit" value="提交"/>
+        </div>
+
+        <!--短链制作成功后的结果-->
+        <div class="result">
+            <div class="result-content">
+                <div class="result-header">
+                    <span class="result-title">提示</span>
+                    <span class="result-close">&times;</span>
+                </div>
+                <div class="result-body">
+                    <!-- <p>短链接：<span id="shortUrl"></span></p> -->
+                </div>
+                <div class="result-footer">
+                    <!-- 复制按钮 -->
+                    <!-- <button class="copy" id="copy">复制</button> -->
+                    <!-- 确定按钮 -->
+                    <!-- <button class="conform" id="conform">确定</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="card">
+        </div>
+        <div class="mdui-divider mdui-m-t-3"></div>
+        <footer class="mdui-m-t-1">
+            <p class="mdui-typo-body-1">考神保佑，走向辉煌！---<b>仙河传送门</b>--- 来自遥远的考神天国</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 </body>
 
 </html>

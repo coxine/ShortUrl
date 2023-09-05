@@ -4,77 +4,18 @@
 }
 
 body {
-    font-family: ceym!important;
-    background: linear-gradient(-20deg, #57875a 5%, #AEDD81 95%);
+    font-family: ceym !important;
+    background: linear-gradient(-20deg, #114514 5%, #AEDD81 95%);
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body,
 html {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
-input[type=text] {
-    border: none;
-    text-align: center;
-    outline: none;
-}
-
-.card {
-    width: 800px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-h1 {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-}
-
-.form-group {
-    padding: 5px 20px 20px 20px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.form-group>label {
-    width: 100px;
-    line-height: 40px;
-    font-size: 18px;
-}
-
-.form-group>input {
-    width: 100%;
-    line-height: 28px;
-    font-size: 18px;
-    padding: 8px;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.form-group>#submit {
-    width: 75%;
-    line-height: 40px;
-    font-size: 18px;
-    background-color: #61bee9;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: auto;
-    margin-top: 20px;
-    display: block;
-}
-
-
 /* 遮罩层 */
-.dialog {
+.result {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -91,7 +32,7 @@ h1 {
 }
 
 /* 弹窗 */
-.dialog-content {
+.result-content {
     width: 450px;
     margin-top: 0;
     height: fit-content;
@@ -102,7 +43,7 @@ h1 {
     transition: margin-top .4s ease-out;
 }
 
-.dialog-content>.dialog-header {
+.result-content>.result-header {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
@@ -113,13 +54,13 @@ h1 {
     justify-content: space-between;
 }
 
-.dialog-content>.dialog-header>.dialog-close {
+.result-content>.result-header>.result-close {
     cursor: pointer;
     /* 不可选中 */
     user-select: none;
 }
 
-.dialog-content>.dialog-body {
+.result-content>.result-body {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
@@ -127,14 +68,14 @@ h1 {
     font-size: 19px;
 }
 
-.dialog-content>.dialog-footer {
+.result-content>.result-footer {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
 }
 
-.dialog-content>.dialog-footer>button {
+.result-content>.result-footer>button {
     width: 90px;
     line-height: 35px;
     font-size: 18px;
@@ -149,33 +90,16 @@ h1 {
 }
 
 /* 显示弹窗 */
-.dialog-show {
+.result-show {
     opacity: 1;
     z-index: 100;
 }
 
-.dialog-show>.dialog-content {
+.result-show>.result-content {
     margin-top: 20px;
 }
-footer{
-    position: fixed;
-    bottom: 5px;
-    width: 100%;;
+
+footer {
+    width: 100%;
     text-align: center;
-    
-    font-size: 18px;
-}
-footer p{
-    color: #222;
-    margin: 0;
-    height: 30px;
-    line-height: 30px;
-}
-footer a{
-    color: #222;
-    text-decoration: none;
-}
-footer a:hover{
-    color: #61bee9;
-    text-decoration: underline;
 }
