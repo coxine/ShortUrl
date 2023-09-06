@@ -29,7 +29,7 @@ var result = document.querySelector('.result');
                     `<p>短链接：<span id="shortUrl">${location.host}/${data.data.shortUrl}</span></p>`;
                 // 在弹窗上显示复制按钮
                 result.querySelector('.result-footer').innerHTML =
-                    `<button class="copy" id="copy">复制</button>`;
+                    `<button class="copy mdui-btn mdui-ripple" id="copy">复制</button>`;
 
                 // 复制按钮
                 var copy = document.getElementById('copy');
@@ -43,9 +43,9 @@ var result = document.querySelector('.result');
                         window.getSelection().addRange(range);
                         document.execCommand('copy');
                         window.getSelection().removeAllRanges();
-                        console.log('Copy success')
+                        alert("复制成功");
                     } catch (e) {
-                        console.log('Copy error')
+                        alert("复制失败");
                     }
                 }
                 // 显示弹窗
@@ -62,9 +62,9 @@ var result = document.querySelector('.result');
                 console.log(data);
                 result.querySelector('.result-body').innerHTML = `<p>${data.msg}</p>`;
                 result.querySelector('.result-footer').innerHTML =
-                    `<button class="conform" id="conform">确定</button>`;
-                var conform = document.getElementById('conform');
-                conform.onclick = function () {
+                    `<button class="confirm mdui-btn mdui-ripple" id="confirm">确定</button>`;
+                var confirm = document.getElementById('confirm');
+                confirm.onclick = function () {
                     result.classList.remove('result-show');
                 }
                 result.classList.add('result-show');
