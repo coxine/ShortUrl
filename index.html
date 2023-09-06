@@ -66,16 +66,9 @@
         <!--短链制作成功后的结果-->
         <div class="result">
             <div class="result-content mdui-dialog" id="dialog">
-                <div class="mdui-dialog-title">链接制作成功！</div>
-                <div class="result-body mdui-dialog-content">
-                    <!-- <p>短链接：<span id="shortUrl"></span></p> -->
-                </div>
-                <div class="result-footer">
-                    <!-- 复制按钮 -->
-                    <!-- <button class="copy" id="copy">复制</button> -->
-                    <!-- 确定按钮 -->
-                    <!-- <button class="confirm" id="confirm">确定</button> -->
-                </div>
+                <div class="mdui-dialog-title">提示</div>
+                <div class="result-body mdui-dialog-content"></div>
+                <div class="result-footer"></div>
             </div>
         </div>
         <div class="card">
@@ -121,7 +114,8 @@
                     // 在弹窗上显示复制按钮
                     result.querySelector(
                         ".result-footer"
-                    ).innerHTML = `<button class="copy mdui-btn mdui-ripple" id="copy">复制</button>`;
+                    ).innerHTML = `<button class="copy mdui-btn mdui-ripple" id="copy">复制</button>
+                    <button class="confirm mdui-btn mdui-ripple" id="confirm" mdui-dialog-confirm>确定</button>`;
 
                     // 复制按钮
                     var copy = document.getElementById("copy");
