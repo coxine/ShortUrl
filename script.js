@@ -3,7 +3,8 @@ var url = document.getElementById("url");
 var shortStr = document.getElementById("shortStr");
 var submit = document.getElementById("submit");
 var $ = mdui.$;
-var dialog = new mdui.Dialog('#dialog');
+var dialog = new mdui.Dialog("#dialog");
+
 submit.onclick = function () {
   if (url.value == "") {
     alert("请输入长链接");
@@ -11,9 +12,7 @@ submit.onclick = function () {
   }
   fetch("/", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       url: url.value,
       shortStr: shortStr.value,
@@ -31,7 +30,7 @@ submit.onclick = function () {
       // 在弹窗上显示复制按钮
       result.querySelector(
         ".result-footer"
-      ).innerHTML = `<button class="copy mdui-btn mdui-ripple" id="copy">复制</button>`;
+      ).innerHTML = `<button class="copy mdui-btn mdui-ripple mdui-text-color-light-green-900" id="copy">复制</button>`;
 
       // 复制按钮
       var copy = document.getElementById("copy");
@@ -50,9 +49,9 @@ submit.onclick = function () {
           alert("复制失败");
         }
       };
+
       // 显示弹窗
-    //   result.classList.add("result-show");
-    dialog.open();
+      dialog.open();
     })
     .catch(async function (err) {
       console.log(err);
@@ -65,26 +64,6 @@ submit.onclick = function () {
       }
       console.log(data);
       result.querySelector(".result-body").innerHTML = `<p>${data.msg}</p>`;
-      result.querySelector(
-        ".result-footer"
-      ).innerHTML = `<button class="confirm mdui-btn mdui-ripple" id="confirm" mdui-dialog-confirm>确定</button>`;
-    //   var confirm = document.getElementById("confirm");
-    //   confirm.onclick = function () {
-    //     result.classList.remove("result-show");
-    //   };
-    //   result.classList.add("result-show");
-    dialog.open();
+      dialog.open();
     });
 };
-// 关闭按钮
-// document.querySelector(".result-close").onclick = function () {
-//   result.classList.remove("result-show");
-// };
-// 点击空白处关闭弹窗
-// result.onclick = function (e) {
-//   // 阻止事件冒泡
-//   e.stopPropagation();
-//   if (e.target == result) {
-//     result.classList.remove("result-show");
-//   }
-// };

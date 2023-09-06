@@ -6,37 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>仙河传送门</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coxine/shorturl/style.css" /> -->
-    <style>
-        @font-face {
-            font-family: "ceym";
-            src: url("https://testingcf.jsdelivr.net/gh/ghboke/corepresscdn@master/static/lib/font/ceym/ceym.woff2") format("woff2");
-        }
-
-        body {
-            font-family: ceym !important;
-            background: linear-gradient(-20deg, #114514 5%, #AEDD81 95%);
-            background-size: cover;
-        }
-
-        body,
-        html {
-            height: 100%;
-        }
-
-        /* 遮罩层 */
-        footer {
-            width: 100%;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coxine/shorturl/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/coxine/shorturl/favicon.svg">
     <meta property="og:title" content="[短链] 打开各异的门，奔赴各自的远方">
     <meta property="og:site_name" content="仙河传送门">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://go.costg.cf">
-    <meta property="og:image" content="">
     <meta property="og:description" content="短小精悍，百用不倒~">
 </head>
 
@@ -74,105 +49,11 @@
         <div class="card">
         </div>
         <div class="mdui-divider mdui-m-t-3"></div>
-        <footer class="mdui-m-t-1">
+        <footer class="mdui-m-t-1 mdui-center">
             <p class="mdui-typo-body-1">考神保佑，走向辉煌！---<b>仙河传送门</b>--- 来自遥远的考神天国</p>
         </footer>
     </div>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/coxine/shorturl/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/coxine/shorturl/script.js"></script>
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-    <script>
-        var result = document.querySelector(".result");
-        var url = document.getElementById("url");
-        var shortStr = document.getElementById("shortStr");
-        var submit = document.getElementById("submit");
-        var $ = mdui.$;
-        var dialog = new mdui.Dialog('#dialog');
-        submit.onclick = function () {
-            if (url.value == "") {
-                alert("请输入长链接");
-                return false;
-            }
-            fetch("/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    url: url.value,
-                    shortStr: shortStr.value,
-                }),
-            })
-                .then(function (res) {
-                    if (res.ok) return res.json();
-                    else throw res;
-                })
-                .then(function (data) {
-                    // 在弹窗上显示短链接
-                    result.querySelector(
-                        ".result-body"
-                    ).innerHTML = `<p>短链接：<span id="shortUrl">${location.host}/${data.data.shortUrl}</span></p>`;
-                    // 在弹窗上显示复制按钮
-                    result.querySelector(
-                        ".result-footer"
-                    ).innerHTML = `<button class="copy mdui-btn mdui-ripple mdui-text-color-light-green-900" id="copy">复制</button>`;
-
-                    // 复制按钮
-                    var copy = document.getElementById("copy");
-                    copy.onclick = function () {
-                        // 将短链接复制到剪贴板
-                        var shortUrl = document.querySelector("#shortUrl");
-                        try {
-                            let range = document.createRange();
-                            range.selectNode(shortUrl);
-                            window.getSelection().removeAllRanges();
-                            window.getSelection().addRange(range);
-                            document.execCommand("copy");
-                            window.getSelection().removeAllRanges();
-                            alert("复制成功");
-                        } catch (e) {
-                            alert("复制失败");
-                        }
-                    };
-                    // 显示弹窗
-                    //   result.classList.add("result-show");
-                    dialog.open();
-                })
-                .catch(async function (err) {
-                    console.log(err);
-                    let data;
-                    try {
-                        data = await err.json();
-                    } catch (e) {
-                        alert("提交失败，请检查网络");
-                        return false;
-                    }
-                    console.log(data);
-                    result.querySelector(".result-body").innerHTML = `<p>${data.msg}</p>`;
-                    // result.querySelector(
-                    //     ".result-footer"
-                    // ).innerHTML = `<button class="confirm mdui-btn mdui-ripple" id="confirm" mdui-dialog-confirm>确定</button>`;
-                    //   var confirm = document.getElementById("confirm");
-                    //   confirm.onclick = function () {
-                    //     result.classList.remove("result-show");
-                    //   };
-                    //   result.classList.add("result-show");
-                    dialog.open();
-                });
-        };
-// 关闭按钮
-// document.querySelector(".result-close").onclick = function () {
-//   result.classList.remove("result-show");
-// };
-// 点击空白处关闭弹窗
-// result.onclick = function (e) {
-//   // 阻止事件冒泡
-//   e.stopPropagation();
-//   if (e.target == result) {
-//     result.classList.remove("result-show");
-//   }
-// };
-
-    </script>
 </body>
-
 </html>
