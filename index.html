@@ -68,7 +68,7 @@
             <div class="result-content mdui-dialog" id="dialog">
                 <div class="mdui-dialog-title">提示</div>
                 <div class="result-body mdui-dialog-content"></div>
-                <div class="result-footer"></div>
+                <div class="result-footer mdui-dialog-actions"></div>
             </div>
         </div>
         <div class="card">
@@ -114,8 +114,7 @@
                     // 在弹窗上显示复制按钮
                     result.querySelector(
                         ".result-footer"
-                    ).innerHTML = `<button class="copy mdui-btn mdui-ripple" id="copy">复制</button>
-                    <button class="confirm mdui-btn mdui-ripple" id="confirm" mdui-dialog-confirm>确定</button>`;
+                    ).innerHTML = `<button class="copy mdui-btn mdui-ripple mdui-text-color-light-green-900" id="copy">复制</button>`;
 
                     // 复制按钮
                     var copy = document.getElementById("copy");
@@ -149,9 +148,9 @@
                     }
                     console.log(data);
                     result.querySelector(".result-body").innerHTML = `<p>${data.msg}</p>`;
-                    result.querySelector(
-                        ".result-footer"
-                    ).innerHTML = `<button class="confirm mdui-btn mdui-ripple" id="confirm" mdui-dialog-confirm>确定</button>`;
+                    // result.querySelector(
+                    //     ".result-footer"
+                    // ).innerHTML = `<button class="confirm mdui-btn mdui-ripple" id="confirm" mdui-dialog-confirm>确定</button>`;
                     //   var confirm = document.getElementById("confirm");
                     //   confirm.onclick = function () {
                     //     result.classList.remove("result-show");
