@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>仙河传送门</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coxine/shorturl/style.css" />
+    <!-- <link rel="stylesheet" href="/style.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/coxine/shorturl/favicon.svg">
     <meta property="og:title" content="[短链] 打开各异的门，奔赴各自的远方">
@@ -15,27 +16,30 @@
     <meta property="og:description" content="短小精悍，百用不倒~">
 </head>
 
-<body class="mdui-theme-primary-light-green mdui-theme-accent-lime">
+<body class="mdui-theme-layout-auto mdui-theme-primary-green mdui-theme-accent-light-green">
     <div class="mdui-container">
         <!--顶栏-->
         <div class="mdui-toolbar">
             <span class="mdui-typo-title">仙河传送门</span>
             <div class="mdui-toolbar-spacer"></div>
-            <a href="https://costg.de" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '瑞治网'}"><i class="mdui-icon material-icons">home</i></a>
-            <a href="https://res.costg.de" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '瑞治下载站'}""><i class="mdui-icon material-icons">file_download</i></a>
+            <a href="https://costg.de" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '瑞治网'}"><i
+                    class="mdui-icon material-icons">home</i></a>
+            <a href="https://res.costg.de" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '瑞治下载站'}""><i class="
+                mdui-icon material-icons">file_download</i></a>
         </div>
 
         <!--输入部分-->
         <div class="input">
             <div class="mdui-textfield mdui-textfield-floating-label">
-                <label class="mdui-textfield-label mdui-text-color-light-green-900">原来的链接，输入格式：https://costg.de</label>
+                <label class="mdui-textfield-label mdui-text-color-theme">原来的链接，输入格式：https://costg.de</label>
                 <input class="mdui-textfield-input" type="url" id="url" name="url" />
             </div>
             <div class="mdui-textfield mdui-textfield-floating-label">
-                <label class="mdui-textfield-label mdui-text-color-light-green-900">短链路径：若填入xxx，则生成https://go.costg.de/xxx，留空随机生成后缀</label>
+                <label
+                    class="mdui-textfield-label mdui-text-color-theme">短链路径：若填入xxx，则生成https://go.costg.de/xxx，留空随机生成后缀</label>
                 <input class="mdui-textfield-input" id="shortStr" name="shortStr" type="text" />
             </div>
-            <input class="mdui-btn-raised mdui-btn mdui-color-light-green-900" type="button" id="submit" value="提交" />
+            <input class="mdui-btn-raised mdui-btn mdui-color-theme" type="button" id="submit" value="提交" />
         </div>
 
         <!--短链制作成功后的结果-->
@@ -56,4 +60,5 @@
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/coxine/shorturl/script.js"></script>
 </body>
+
 </html>

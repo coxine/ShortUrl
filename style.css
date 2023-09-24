@@ -3,17 +3,6 @@
     src: url("https://testingcf.jsdelivr.net/gh/ghboke/corepresscdn@master/static/lib/font/ceym/ceym.woff2") format("woff2");
 }
 
-body {
-    font-family: ceym !important;
-    background: linear-gradient(-20deg, #114514 5%, #AEDD81 95%);
-    background-size: cover;
-}
-
-body,
-html {
-    height: 100%;
-}
-
 footer {
     width: 100%;
     text-align: center;
